@@ -1,0 +1,28 @@
+.Hero {
+  color: $Theme-color-white;
+  background-color: $Theme-color-light-blue;
+}
+
+.Hero-title {
+  margin-top: $Theme-margin-default;
+  text-align: center;
+}
+
+.Hero-titleSans {
+  @include font-properties(sans);
+  font-size: 38px;
+}
+
+.Hero-titleSerif {
+  @include font-properties(serif);
+  font-style: italic;
+  font-size: 54px;
+}
+
+.Hero-content {
+  @include font-properties(serif);
+  max-width: 600px;
+  margin-top: $Theme-margin-half;
+  font-size: 24px;
+  text-align: center;
+}

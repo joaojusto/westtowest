@@ -1,0 +1,20 @@
+$Theme-margin-small: 250px;
+$Theme-margin-half: 50px;
+$Theme-margin-default: 100px;
+$Theme-margin-large: 200px;
+
+$Theme-color-white: #ffffff;
+$Theme-color-black: #333333;
+$Theme-color-blue: #0b3958;
+$Theme-color-light-blue: #74b9dd;
+$Theme-color-red: #d05353;
+$Theme-color-green: #36d0a3;
+
+$Theme-font-families: (
+  sans: 'proxima-nova',
+  serif: 'minion-pro'
+);
+
+@mixin font-properties($family) {
+  font-family: map-get($Theme-font-families, $family);
+}

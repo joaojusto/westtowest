@@ -1,0 +1,14 @@
+$logo-width: 179px;
+$logo-height: 120px;
+
+.Logo {
+  width: $logo-width;
+  height: $logo-height;
+  background-image: url('../images/logo@2x.png');
+  background-size: contain;
+}
+
+.Logo.Logo--half {
+  width: $logo-width / 2;
+  height: $logo-height / 2;
+}
