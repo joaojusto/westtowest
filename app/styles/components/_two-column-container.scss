@@ -23,8 +23,20 @@
   text-transform: uppercase;
 }
 
-.TwoColumnContainer-content {
+.TwoColumnContainer-contentWhite {
   @include font-properties(serif);
 
   margin-top: $Theme-margin-small;
+
+  color: $Theme-color-white;
+  opacity: 0.7;
+}
+
+.TwoColumnContainer-contentBlack {
+  @include font-properties(serif);
+
+  margin-top: $Theme-margin-small;
+
+  color: $Theme-color-black;
+  opacity: 0.6;
 }
