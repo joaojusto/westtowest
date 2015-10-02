@@ -76,13 +76,25 @@ $panel-content-max-width: 500px;
 
 .Panel--services {
   background-image: url('../images/services@2x.png');
-  background-size: contain;
-  background-position-x: 100%;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
 .Panel--cta {
   background-image: url('../images/cta@2x.png');
   background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.Panel--mentorship{
+  background-image: url('../images/mentorship@2x.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.Panel--networking {
+  color: $Theme-color-white;
+  background-image: url('../images/networking@2x.png');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
