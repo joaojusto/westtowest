@@ -1,5 +1,6 @@
 $panel-title-image-width: 32px;
 $panel-title-image-height: 55px;
+$panel-title-image-margin: 5px;
 
 $panel-content-max-width: 500px;
 
@@ -29,6 +30,7 @@ $panel-content-max-width: 500px;
 
 .Panel-titleSerif{
   @include font-properties(serif);
+  line-height: 40px;
   font-size: 44px;
   font-style: italic;
   font-weight: bold;
@@ -39,8 +41,11 @@ $panel-content-max-width: 500px;
   width: $panel-title-image-width;
   height: $panel-title-image-height;
 
+  padding-bottom: $panel-title-image-margin;
+
   background-image: url('../images/lighthouse@2x.png');
   background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .Panel-content{
@@ -51,6 +56,8 @@ $panel-content-max-width: 500px;
 }
 
 .Panel-text {
+  @include font-properties(serif);
+
   color: $Theme-color-black;
   opacity: 0.6;
   font-size: 20px;
@@ -61,4 +68,21 @@ $panel-content-max-width: 500px;
   background-color: $Theme-color-blue;
 
   color: $Theme-color-white;
+
+  .Panel-titleImage {
+    background-image: url('../images/lighthouse-white@2x.png');
+  }
+}
+
+.Panel--services {
+  background-image: url('../images/services@2x.png');
+  background-size: contain;
+  background-position-x: 100%;
+  background-repeat: no-repeat;
+}
+
+.Panel--cta {
+  background-image: url('../images/cta@2x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
 }

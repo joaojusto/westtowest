@@ -1,0 +1,17 @@
+$separator-width: 30px;
+$separator-height: 2px;
+
+.Separator {
+  width: $separator-width;
+  height: $separator-height;
+  margin-top: $Theme-margin-small;
+  background-color: $Theme-color-green;
+}
+
+.Separator--blue {
+  background-color: $Theme-color-blue;
+}
+
+.Separator--lightBlue {
+  background-color: $Theme-color-light-blue;
+}
