@@ -1,0 +1,16 @@
+$button-width: 180px;
+$button-height: 50px;
+
+.Button {
+  @include font-properties(sans);
+
+  width: $button-width;
+  height: $button-height;
+  background-color: $Theme-color-red;
+
+  font-size: 16px;
+  color: $Theme-color-white;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: $button-height;
+}

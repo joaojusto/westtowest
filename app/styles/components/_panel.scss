@@ -1,18 +1,21 @@
 $panel-title-image-width: 32px;
 $panel-title-image-height: 55px;
 
+$panel-content-max-width: 500px;
+
 .Panel {
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  padding: $Theme-margin-large;
+  padding: $Theme-margin-large $Theme-margin-default;
+
+  color: $Theme-color-blue;
 }
 
 .Panel-title {
   display: flex;
   flex-direction: column;
-  color: $Theme-color-blue;
   align-items: center;
   text-align: center;
 }
@@ -38,4 +41,24 @@ $panel-title-image-height: 55px;
 
   background-image: url('../images/lighthouse@2x.png');
   background-size: contain;
+}
+
+.Panel-content{
+  @include font-properties(sans);
+
+  margin-top: $Theme-margin-half;
+  max-width: $panel-content-max-width;
+}
+
+.Panel-text {
+  color: $Theme-color-black;
+  opacity: 0.6;
+  font-size: 20px;
+  text-align: center;
+}
+
+.Panel--blue {
+  background-color: $Theme-color-blue;
+
+  color: $Theme-color-white;
 }
