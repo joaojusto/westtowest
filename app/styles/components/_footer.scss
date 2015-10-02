@@ -4,5 +4,11 @@
 }
 
 .Footer-content {
+  @include font-properties(sans);
+
   margin-top: $Theme-margin-half;
+
+  color: $Theme-color-white;
+  font-size: 20px;
+  font-weight: bold;
 }
