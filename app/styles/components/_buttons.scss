@@ -13,4 +13,12 @@ $button-height: 50px;
   text-transform: uppercase;
   text-align: center;
   line-height: $button-height;
+
+  cursor: pointer;
+}
+
+.Button--outline {
+  background: none;
+
+  border: 1px solid $Theme-color-white;
 }
