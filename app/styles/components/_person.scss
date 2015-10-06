@@ -1,0 +1,58 @@
+$person-image-size: 200px;
+$person-name-max-width: 175px;
+
+.Person {
+  display: flex;
+  flex-direction: row;
+
+  margin-bottom: $Theme-margin-default;
+}
+
+.Person-information {
+  display: flex;
+  flex-direction: column;
+
+  width: $person-name-max-width;
+  margin-left: $Theme-margin-small;
+
+  color: $Theme-color-white;
+}
+
+.Person-image {
+  width: $person-image-size;
+  height: $person-image-size;
+}
+
+.Person-name {
+  @include font-properties(sans);
+
+  text-transform: uppercase;
+
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.Person-job {
+  @include font-properties(serif);
+
+  margin-top: $Theme-margin-small;
+  text-transform: capitalize;
+
+  opacity: 0.7;
+  font-size: 24px;
+  line-height: 34px;
+}
+
+.Person-link {
+  margin-top: $Theme-margin-small;
+}
+
+.Person--dark {
+  .Person-information {
+    color: $Theme-color-blue;
+  }
+
+  .Person-job {
+    opacity: 0.7;
+  }
+}

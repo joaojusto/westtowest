@@ -1,0 +1,15 @@
+$grid-max-width: 900px;
+
+.Grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  max-width: $grid-max-width;
+  margin-top: $Theme-margin-half;
+}
+
+//.Grid-cell {
+//  flex: 1;
+//}
