@@ -1,0 +1,46 @@
+.Background {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+
+  left: 0;
+  margin-top: -$Theme-margin-large;
+}
+
+.BackgroundColumn{
+  width: 100%;
+  background-size: cover;
+  background-position-x: 0%;
+}
+
+.BackgroundColumn--rightAlign {
+  background-position-x: 100%;
+};
+
+.BackgroundColumn--blue {
+  background-color: $Theme-color-blue;
+}
+
+.BackgroundColumn--green {
+  background-color: $Theme-color-green;
+}
+
+.BackgroundColumn--white {
+  background-color: $Theme-color-white;
+}
+
+.BackgroundColumn--imageServices {
+  background-image: url('../images/services@2x.png');
+}
+
+.BackgroundColumn--imageMentorship{
+  background-image: url('../images/mentorship@2x.png');
+}
+
+.BackgroundColumn--imageNetworking {
+  background-image: url('../images/networking@2x.png');
+}

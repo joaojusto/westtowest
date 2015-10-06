@@ -65,8 +65,6 @@ $panel-content-max-width: 500px;
 }
 
 .Panel--blue {
-  background-color: $Theme-color-blue;
-
   color: $Theme-color-white;
 
   .Panel-titleImage {
@@ -74,21 +72,13 @@ $panel-content-max-width: 500px;
   }
 }
 
-.Panel--services {
-  background-image: url('../images/services@2x.png');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
+.Panel--solidBlue {
+  background-color: $Theme-color-blue;
 }
 
 .Panel--cta {
   background-image: url('../images/cta@2x.png');
   background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.Panel--mentorship{
-  background-image: url('../images/mentorship@2x.png');
-  background-size: 100% 100%;
   background-repeat: no-repeat;
 }
 
