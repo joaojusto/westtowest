@@ -10,6 +10,6 @@ $grid-max-width: 900px;
   margin-top: $Theme-margin-half;
 }
 
-//.Grid-cell {
-//  flex: 1;
-//}
+.Grid-cell {
+  margin: 0 auto;
+}

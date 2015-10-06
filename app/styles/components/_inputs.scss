@@ -1,7 +1,10 @@
 $input-padding: 10px;
+$input-group-width: 500px;
 
 .InputGroup {
   width: 100%;
+  min-width: 500px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
