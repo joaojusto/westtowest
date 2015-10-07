@@ -1,3 +1,6 @@
+$column-min-width: 250px;
+$column-max-width: 500px;
+
 .TwoColumnContainer {
   display: flex;
   flex-direction: row;
@@ -8,8 +11,9 @@
 }
 
 .TwoColumnContainer-column {
-  flex: 1;
-  max-width: 500px;
+  flex: 1 1 $column-min-width;
+  min-width: $column-min-width;
+  max-width: $column-max-width;
 
   font-size: 20px;
   line-height: 30px;

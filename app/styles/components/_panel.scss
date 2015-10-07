@@ -76,6 +76,10 @@ $panel-content-max-width: 500px;
   background-color: $Theme-color-blue;
 }
 
+.Panel--solidWhite {
+  background-color: $Theme-color-white;
+}
+
 .Panel--cta {
   background-image: url('../images/cta@2x.jpg');
   background-size: cover;
