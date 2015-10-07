@@ -1,5 +1,6 @@
+$person-job-margin: 5px;
 $person-image-size: 200px;
-$person-name-max-width: 175px;
+$person-name-max-width: 200px;
 
 .Person {
   display: flex;
@@ -35,6 +36,18 @@ $person-name-max-width: 175px;
 .Person-job {
   @include font-properties(serif);
 
+  margin-top: $person-job-margin;
+  text-transform: capitalize;
+
+  opacity: 0.7;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: bold;
+}
+
+.Person-company {
+  @include font-properties(serif);
+
   margin-top: $Theme-margin-small;
   text-transform: capitalize;
 
@@ -52,11 +65,20 @@ $person-name-max-width: 175px;
     color: $Theme-color-blue;
   }
 
-  .Person-job {
+  .Person-job,
+  .Person-company {
     opacity: 0.7;
+  }
+
+  .Person-company {
+    font-style: italic;
   }
 }
 
 .Person--noMargin {
   margin: 0;
+}
+
+.Person--placeholder{
+  width: 400px;
 }
