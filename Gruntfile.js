@@ -446,7 +446,6 @@ module.exports = function (grunt) {
 
   grunt.registerTask('deploy', [
     'newer:eslint',
-    'test',
     'build',
     'gh-pages'
   ]);
