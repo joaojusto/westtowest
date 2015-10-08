@@ -13,7 +13,7 @@ $Theme-color-green: #36d0a3;
 
 $Theme-font-families: (
   sans: 'proxima-nova',
-  serif: 'minion-pro-caption'
+  serif: 'minion-pro-caption',
 );
 
 @mixin font-properties($family) {
