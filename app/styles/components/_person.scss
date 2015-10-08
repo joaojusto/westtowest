@@ -54,6 +54,7 @@ $person-name-max-width: 200px;
   opacity: 0.7;
   font-size: 24px;
   line-height: 34px;
+  font-style: italic;
 }
 
 .Person-link {
@@ -67,11 +68,7 @@ $person-name-max-width: 200px;
 
   .Person-job,
   .Person-company {
-    opacity: 0.7;
-  }
-
-  .Person-company {
-    font-style: italic;
+    opacity: 0.6;
   }
 }
 
