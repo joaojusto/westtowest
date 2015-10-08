@@ -4,6 +4,8 @@ $button-height: 50px;
 .Button {
   @include font-properties(sans);
 
+  display: block;
+
   width: $button-width;
   height: $button-height;
   background-color: $Theme-color-red;
