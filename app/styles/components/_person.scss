@@ -1,6 +1,7 @@
 $person-job-margin: 5px;
 $person-image-size: 200px;
 $person-name-max-width: 200px;
+$person-link-icon-size: 25px;
 
 .Person {
   display: flex;
@@ -58,6 +59,8 @@ $person-name-max-width: 200px;
 }
 
 .Person-link {
+  width: $person-link-icon-size;
+  height: $person-link-icon-size;
   margin-top: $Theme-margin-small;
 }
 
