@@ -8,6 +8,8 @@ $button-height: 50px;
 
   width: $button-width;
   height: $button-height;
+  padding: 0;
+
   background-color: $Theme-color-red;
 
   font-size: 16px;
@@ -23,4 +25,16 @@ $button-height: 50px;
   background: none;
 
   border: 1px solid $Theme-color-white;
+}
+
+.Button:hover {
+  background-color: darken($Theme-color-red, 15%);
+
+  transition: background-color .3s;
+}
+
+.Button--outline:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+
+  transition: background-color 0.3;
 }
