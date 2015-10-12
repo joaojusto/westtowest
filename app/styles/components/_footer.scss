@@ -1,4 +1,15 @@
+$svg-width: 151px;
+$svg-height: 21px;
+$svg-margin-top: 12px;
+
+$svg-width-mobile: 114px;
+$svg-height-mobile: 16px;
+
 .Footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
   padding: $Theme-margin-default;
   background-color: $Theme-color-blue;
 }
@@ -12,6 +23,30 @@
   font-weight: bold;
 }
 
+.Footer-column{
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.Footer-credits {
+  @include font-properties(sans, desktop, content, small);
+
+  align-self: flex-end;
+
+  color: $Theme-color-white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Footer-svgWrapper {
+  width: $svg-width;
+  height: $svg-height;
+
+  margin-top: $svg-margin-top;
+  margin-bottom: 8px;
+}
+
 @media (max-width: $Theme-break-mobile) {
   .Footer {
     padding: $Theme-margin-half $Theme-margin-small;
@@ -19,5 +54,20 @@
 
   .Footer-content {
     @include font-properties(sans, mobile);
+
+    margin-top: $Theme-margin-small;
+  }
+
+  .Footer-credits {
+    @include font-properties(sans, mobile, content, small);
+
+    margin-top: $Theme-margin-half;
+
+    text-align: left;
+  }
+
+  .Footer-svgWrapper{
+    width: $svg-width-mobile;
+    height: $svg-height-mobile;
   }
 }
