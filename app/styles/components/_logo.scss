@@ -9,7 +9,8 @@ $logo-height-mobile: 50px;
   height: $logo-height;
 
   background-image: url('../images/logo@2x.png');
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .Logo.Logo--half {
@@ -21,8 +22,6 @@ $logo-height-mobile: 50px;
   .Logo {
     width: $logo-width-mobile;
     height: $logo-height-mobile;
-
-    background-image: url('../images/logo.png');
   }
 
   .Logo.Logo--half {
