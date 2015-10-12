@@ -53,6 +53,6 @@ $input-group-break-mobile: 549px;
 
 @media (max-width: $input-group-break-mobile) {
   .InputGroup-marginOnSmall {
-    margin-bottom: $Theme-margin-small;
+    margin: $Theme-margin-half 0 $Theme-margin-small 0;
   }
 }

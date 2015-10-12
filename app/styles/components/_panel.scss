@@ -2,6 +2,9 @@ $panel-title-image-width: 32px;
 $panel-title-image-height: 55px;
 $panel-title-image-margin: 5px;
 
+$panel-title-image-moblie-width: 23.6px;
+$panel-title-image-moblie-height: 40.6px;
+
 $panel-content-max-width: 500px;
 
 .Panel {
@@ -11,6 +14,8 @@ $panel-content-max-width: 500px;
 
   padding: $Theme-margin-large $Theme-margin-half;
 
+  background-repeat: no-repeat;
+
   color: $Theme-color-blue;
 }
 
@@ -19,6 +24,8 @@ $panel-content-max-width: 500px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+
+  margin-bottom: $Theme-margin-half;
 }
 
 .Panel-heading {
@@ -29,7 +36,7 @@ $panel-content-max-width: 500px;
   opacity: $Theme-opacity-half;
 }
 
-.Panel-subHeading{
+.Panel-subHeading {
   @include font-properties(serif, desktop, content, sub-heading);
 
   font-style: italic;
@@ -48,7 +55,7 @@ $panel-content-max-width: 500px;
   background-repeat: no-repeat;
 }
 
-.Panel-content{
+.Panel-content {
   @include font-properties(sans);
 
   margin-top: $Theme-margin-half;
@@ -90,4 +97,53 @@ $panel-content-max-width: 500px;
   background-image: url('../images/networking@2x.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+}
+
+@media (max-width: $Theme-break-mobile) {
+  .Panel {
+    padding: $Theme-margin-default $Theme-margin-small;
+  }
+
+  .Panel-heading {
+    @include font-properties(sans, mobile, content, heading);
+  }
+
+  .Panel-subHeading {
+    @include font-properties(serif, mobile, content, sub-heading);
+  }
+
+  .Panel-content {
+    @include font-properties(sans, mobile);
+  }
+
+  .Panel-text {
+    @include font-properties(serif, mobile);
+  }
+
+  .Panel-titleImage {
+    width: $panel-title-image-moblie-width;
+    height: $panel-title-image-moblie-height;
+  }
+
+  .Panel--noPaddingTop {
+    padding-top: 0;
+  }
+
+  .Panel--services {
+    background-size: cover;
+    background-image: url('../images/services.jpg');
+    background-position: 0 0;
+  }
+
+  .Panel--mentorship {
+    background-size: cover;
+    background-image: url('../images/mentorship.jpg');
+    background-position: 0 0;
+  }
+
+  .Panel--networking {
+    background-size: cover;
+    background-image: url('../images/networking.jpg');
+    background-position: 0 0;
+  }
 }

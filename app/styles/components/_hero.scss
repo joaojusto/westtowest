@@ -39,3 +39,29 @@ $hero-max-width: 600px;
 
   text-align: center;
 }
+
+@media (max-width: $Theme-break-mobile) {
+  .Hero {
+    padding: $Theme-margin-default $Theme-margin-small;
+
+    background-image: url('../images/hero.jpg');
+  }
+
+  .Hero-title {
+    margin-top: $Theme-margin-half;
+  }
+
+  .Hero-heading {
+    @include font-properties(sans, mobile, hero, base);
+  }
+
+  .Hero-subHeading {
+    @include font-properties(serif, mobile, hero, large);
+  }
+
+  .Hero-content {
+    @include font-properties(serif, mobile, hero, small);
+
+    margin-top: $Theme-margin-small;
+  }
+}

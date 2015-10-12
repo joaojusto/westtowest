@@ -1,6 +1,8 @@
 $column-min-width: 250px;
 $column-max-width: 500px;
 
+$column-min-width-mobile: 200px;
+
 .TwoColumnContainer {
   display: flex;
   flex-direction: row;
@@ -15,7 +17,6 @@ $column-max-width: 500px;
   min-width: $column-min-width;
   max-width: $column-max-width;
 
-  margin-top: $Theme-margin-half;
   margin-left: auto;
   margin-right: auto;
   padding: 0 $Theme-margin-small;
@@ -44,4 +45,26 @@ $column-max-width: 500px;
 
   color: $Theme-color-black;
   opacity: $Theme-opacity-black;
+}
+
+@media (max-width: $Theme-break-mobile) {
+  .TwoColumnContainer-column {
+    flex: 1;
+
+    min-width: $column-min-width-mobile;
+
+    padding: 0;
+  }
+
+  .TwoColumnContainer-title {
+    @include font-properties(sans, mobile);
+  }
+
+  .TwoColumnContainer-contentWhite {
+    @include font-properties(serif, mobile);
+  }
+
+  .TwoColumnContainer-contentBlack {
+    @include font-properties(serif, mobile);
+  }
 }

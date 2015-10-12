@@ -6,6 +6,7 @@ $person-link-icon-size: 25px;
 .Person {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 
   margin-bottom: $Theme-margin-default;
 }
@@ -70,4 +71,32 @@ $person-link-icon-size: 25px;
 
 .Person--noMargin {
   margin: 0;
+}
+
+@media (max-width: $Theme-break-mobile) {
+  .Person {
+    margin-bottom: $Theme-margin-half;
+  }
+
+  .Person-name {
+    @include font-properties(sans, mobile);
+
+    margin-top: $Theme-margin-small;
+  }
+
+  .Person-job {
+    @include font-properties(serif, mobile, content, small);
+  }
+
+  .Person-company {
+    @include font-properties(serif, mobile, content, large);
+  }
+
+  .Person-image {
+    margin: 0 auto;
+  }
+
+  .Person--noMargin {
+    margin: 0;
+  }
 }

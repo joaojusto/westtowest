@@ -11,6 +11,13 @@ $sponsor-cell-height: 80px;
 }
 
 .SponsorGrid-cell {
+  max-width: 100%;
   height: $sponsor-cell-height;
   margin: $Theme-margin-small $Theme-margin-half;
+}
+
+@media (max-width: $Theme-break-mobile) {
+  .SponsorGrid {
+    margin-top: 0;
+  }
 }

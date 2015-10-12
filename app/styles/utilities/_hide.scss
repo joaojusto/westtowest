@@ -1,0 +1,11 @@
+@media (max-width: $Theme-break-mobile) {
+  .u-hideOnMobile{
+    display: none;
+  }
+}
+
+@media (min-width: $Theme-break-mobile) {
+  .u-hideOnDesktop{
+    display: none;
+  }
+}

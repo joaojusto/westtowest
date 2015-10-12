@@ -2,6 +2,8 @@ $button-width: 180px;
 $button-height: 50px;
 $button-transtition-duration: 0.3s;
 
+$button-width-mobile: 150px;
+
 .Button {
   @include font-properties(sans, desktop, content, small);
 
@@ -37,4 +39,16 @@ $button-transtition-duration: 0.3s;
   background-color: rgba(255, 255, 255, 0.15);
 
   transition: background-color $button-transtition-duration;
+}
+
+@media (max-width: $Theme-break-mobile) {
+  .Button {
+    @include font-properties(sans, mobile, content, small);
+
+    width: $button-width-mobile;
+
+    margin: 0 auto;
+
+    line-height: $button-height;
+  }
 }
