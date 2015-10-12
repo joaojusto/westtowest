@@ -1,0 +1,53 @@
+$nav-height: 100px;
+$nav-height-mobile: 60px;
+
+$nav-logo-width: 75px;
+$nav-logo-height: 50px;
+
+.Nav {
+  width: 100%;
+  height: $nav-height;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+
+  background-color: $Theme-color-white;
+
+  z-index: 1;
+}
+
+.Nav-logo {
+  width: $nav-logo-width;
+  height: $nav-logo-height;
+
+  margin-left: $Theme-margin-half;
+
+  background-color: $Theme-color-light-blue;
+  background-size: cover;
+  background-image: url('../images/logo@2x.png');
+}
+
+.Nav-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.Nav-link {
+  @include font-properties(sans, desktop, content, small);
+
+  margin: 0 $Theme-margin-half;
+
+  color: $Theme-color-light-blue;
+  text-transform: uppercase;
+}
+
+
+@media (max-width: $Theme-break-mobile) {
+  .Nav {
+    height: $nav-height-mobile;
+  }
+}
