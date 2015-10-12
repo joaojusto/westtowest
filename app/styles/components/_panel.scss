@@ -25,7 +25,7 @@ $panel-content-max-width: 500px;
   align-items: center;
   text-align: center;
 
-  margin-bottom: $Theme-margin-half;
+  margin-bottom: $Theme-margin-default;
 }
 
 .Panel-heading {
@@ -104,6 +104,10 @@ $panel-content-max-width: 500px;
     padding: $Theme-margin-default $Theme-margin-small;
   }
 
+  .Panel-title {
+    margin-bottom: $Theme-margin-half;
+  }
+
   .Panel-heading {
     @include font-properties(sans, mobile, content, heading);
   }
@@ -114,6 +118,8 @@ $panel-content-max-width: 500px;
 
   .Panel-content {
     @include font-properties(sans, mobile);
+
+    //margin-top: 0;
   }
 
   .Panel-text {
