@@ -21,17 +21,17 @@ $panel-content-max-width: 500px;
   text-align: center;
 }
 
-.Panel-titleSans {
-  @include font-properties(sans);
-  opacity: 0.5;
-  font-size: 28px;
+.Panel-heading {
+  @include font-properties(sans, desktop, content, heading);
+
   text-transform: uppercase;
+
+  opacity: $Theme-opacity-half;
 }
 
-.Panel-titleSerif{
-  @include font-properties(serif);
-  line-height: 40px;
-  font-size: 44px;
+.Panel-subHeading{
+  @include font-properties(serif, desktop, content, sub-heading);
+
   font-style: italic;
   font-weight: bold;
   text-transform: capitalize;
@@ -59,8 +59,7 @@ $panel-content-max-width: 500px;
   @include font-properties(serif);
 
   color: $Theme-color-black;
-  opacity: 0.6;
-  font-size: 20px;
+  opacity: $Theme-opacity-black;
   text-align: center;
 }
 

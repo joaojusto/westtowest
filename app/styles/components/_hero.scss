@@ -1,3 +1,5 @@
+$hero-max-width: 600px;
+
 .Hero {
   display: flex;
   flex-direction: column;
@@ -14,25 +16,26 @@
 
 .Hero-title {
   margin-top: $Theme-margin-default;
+
   text-align: center;
 }
 
-.Hero-titleSans {
-  @include font-properties(sans);
-  font-size: 38px;
+.Hero-heading {
+  @include font-properties(sans, desktop, hero, base);
 }
 
-.Hero-titleSerif {
-  @include font-properties(serif);
+.Hero-subHeading {
+  @include font-properties(serif, desktop, hero, large);
+
   font-style: italic;
-  font-size: 54px;
 }
 
 .Hero-content {
-  @include font-properties(serif);
-  max-width: 600px;
+  @include font-properties(serif, desktop, hero, small);
+
+  max-width: $hero-max-width;
+
   margin-top: $Theme-margin-half;
-  font-size: 24px;
-  line-height: 34px;
+
   text-align: center;
 }

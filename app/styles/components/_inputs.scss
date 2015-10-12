@@ -24,16 +24,14 @@ $input-group-break-mobile: 549px;
 }
 
 .InputGroup-label {
-  @include font-properties(sans);
+  @include font-properties(sans, desktop, content, small);
 
-  font-size: 16px;
-  line-height: 26px;
   font-weight: bold;
   text-transform: uppercase;
 }
 
 .InputGroup-input {
-  @include font-properties(serif);
+  @include font-properties(serif, desktop, content, small);
 
   padding: $input-padding 0;
 
@@ -41,8 +39,6 @@ $input-group-break-mobile: 549px;
   background: none;
 
   color: $Theme-color-white;
-  font-size: 16px;
-  line-height: 26px;
 }
 
 .InputGroup--fullSize {

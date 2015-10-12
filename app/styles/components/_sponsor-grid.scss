@@ -1,3 +1,5 @@
+$sponsor-cell-height: 80px;
+
 .SponsorGrid {
   width: 100%;
   display: flex;
@@ -9,6 +11,6 @@
 }
 
 .SponsorGrid-cell {
-  height: 80px;
+  height: $sponsor-cell-height;
   margin: $Theme-margin-small $Theme-margin-half;
 }

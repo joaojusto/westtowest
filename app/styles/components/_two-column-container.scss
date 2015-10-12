@@ -15,9 +15,6 @@ $column-max-width: 500px;
   min-width: $column-min-width;
   max-width: $column-max-width;
 
-  font-size: 20px;
-  line-height: 30px;
-
   margin-top: $Theme-margin-half;
   margin-left: auto;
   margin-right: auto;
@@ -37,7 +34,7 @@ $column-max-width: 500px;
   margin-top: $Theme-margin-small;
 
   color: $Theme-color-white;
-  opacity: 0.7;
+  opacity: $Theme-opacity-white;
 }
 
 .TwoColumnContainer-contentBlack {
@@ -46,5 +43,5 @@ $column-max-width: 500px;
   margin-top: $Theme-margin-small;
 
   color: $Theme-color-black;
-  opacity: 0.6;
+  opacity: $Theme-opacity-black;
 }
