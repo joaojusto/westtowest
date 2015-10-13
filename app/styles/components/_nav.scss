@@ -10,6 +10,9 @@ $nav-logo-mobile-height: 35px;
 $nav-burger-width: 25px;
 $nav-burger-height: 16px;
 
+$nav-separator-width: 25px;
+$nav-separator-height: 2px;
+
 .Nav {
   width: 100%;
   height: $nav-height;
@@ -71,6 +74,73 @@ $nav-burger-height: 16px;
   background-size: contain;
   background-repeat: no-repeat;
   background-image: url('../images/hamburger@2x.png');
+}
+
+.Nav-overlay {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background-color: $Theme-color-white;
+
+  transition: all 0.3s;
+}
+
+.Nav-overvlayHide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.Nav-overlayHeader {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  padding: $Theme-margin-small 0;
+  margin-bottom: $Theme-margin-half;
+}
+
+.Nav-close {
+  width: $nav-burger-width;
+  height: $nav-burger-height;
+
+  margin-right: $Theme-margin-small;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('../images/close@2x.png');
+}
+
+.Nav-overlayLink{
+  @include font-properties(sans, desktop, content, small);
+
+  padding: $Theme-margin-small / 2;
+  margin-bottom: $Theme-margin-small / 2;
+
+  color: $Theme-color-light-blue;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $Theme-color-blue;
+
+    transition: color 0.4s;
+  }
+}
+
+.Nav-separator {
+  width: $nav-separator-width;
+  height: $nav-separator-height;
+
+  background-color: $Theme-color-blue;
 }
 
 .Nav.Nav--onTop {

@@ -31,13 +31,28 @@
     <nav class="Nav Nav--onTop">
       <div class="Nav-logo"></div>
       <div class="Nav-links">
-        <a href="#" class="Nav-link">Mission</a>
-        <a href="#" class="Nav-link">What we offer</a>
-        <a href="#" class="Nav-link">officers</a>
-        <a href="#" class="Nav-link">board</a>
+        <a href="#mission" class="Nav-link">Mission</a>
+        <a href="#services" class="Nav-link">What we offer</a>
+        <a href="#officers" class="Nav-link">officers</a>
+        <a href="#board" class="Nav-link">board</a>
         <a href="#" class="Nav-link">experts</a>
       </div>
       <div class="Nav-burger u-hideOnDesktop"></div>
+
+      <div class="Nav-overlay Nav-overvlayHide">
+        <div class="Nav-overlayHeader">
+          <div class="Nav-close"></div>
+        </div>
+        <a href="#mission" class="Nav-overlayLink">Mission</a>
+        <div class="Nav-separator"></div>
+        <a href="#services" class="Nav-overlayLink">What we offer</a>
+        <div class="Nav-separator"></div>
+        <a href="#officers" class="Nav-overlayLink">officers</a>
+        <div class="Nav-separator"></div>
+        <a href="#board" class="Nav-overlayLink">board</a>
+        <div class="Nav-separator"></div>
+        <a href="#" class="Nav-overlayLink">experts</a>
+      </div>
     </nav>
 
     <section class="Hero">
@@ -58,7 +73,7 @@
       </p>
     </section>
 
-    <section class="Panel Panel--solidWhite">
+    <section class="Panel Panel--solidWhite" id="mission">
       <div class="Panel-title">
         <div class="Panel-titleImage"></div>
         <div class="Panel-heading">Our</div>
@@ -77,7 +92,7 @@
       </div>
     </section>
 
-    <section class="Panel Panel--blue Panel--services">
+    <section class="Panel Panel--blue Panel--services" id="services">
       <div class="Background">
         <div class="BackgroundColumn BackgroundColumn--blue"></div>
         <div class="BackgroundColumn BackgroundColumn--imageServices"></div>
@@ -182,7 +197,7 @@
       </div>
     </section>
 
-    <section class="Panel Panel--blue Panel--cta">
+    <section class="Panel Panel--blue Panel--cta" id="subscribe">
       <div class="TwoColumnContainer">
         <div class="TwoColumnContainer-column">
           <div class="TwoColumnContainer-title">
@@ -223,7 +238,7 @@
       </div>
     </section>
 
-    <section class="Panel Panel--blue Panel--solidBlue">
+    <section class="Panel Panel--blue Panel--solidBlue" id="officers">
       <div class="Panel-title">
         <div class="Panel-titleImage"></div>
         <div class="Panel-heading">Our</div>
@@ -277,7 +292,7 @@
       </div>
     </section>
 
-    <section class="Panel Panel--solidWhite">
+    <section class="Panel Panel--solidWhite" id="board">
       <div class="Panel-title">
         <div class="Panel-titleImage"></div>
         <div class="Panel-heading">Our</div>
@@ -353,7 +368,7 @@
       </div>
     </section>
 
-    <section class="Panel Panel--solidWhite Panel--noPaddingTop">
+    <section class="Panel Panel--solidWhite Panel--noPaddingTop" id="sponsors">
       <div class="Panel-title">
         <div class="Panel-titleImage"></div>
         <div class="Panel-heading">valuable</div>
@@ -396,6 +411,7 @@
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/nav.js"></script>
+    <script src="scripts/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
