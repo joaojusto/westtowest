@@ -4,17 +4,14 @@ $(function() {
   const onTopClass = 'Nav--onTop';
 
   let $nav = $(navSelector);
-  let lastScrollTop = 0;
 
   function onScroll() {
     var currentScrollTop = $(document).scrollTop();
 
-    setTimeout(updateNav(currentScrollTop, lastScrollTop), 250);
-
-    lastScrollTop = currentScrollTop;
+    setTimeout(updateNav(currentScrollTop), 250);
   }
 
-  function updateNav(currentScrollTop, lastScrollTop) {
+  function updateNav(currentScrollTop) {
     var update = function() {
       if (isOnTop(currentScrollTop) && !$nav.hasClass(onTopClass))
         toggleNavOnTop();

@@ -7,7 +7,6 @@ $(function() {
   let $navLinks = $('.Nav-overlayLink');
 
   function toggleMenu() {
-    console.log('here')
     $overlay.toggleClass(closeClass);
   }
 
