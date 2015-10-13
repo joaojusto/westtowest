@@ -1,4 +1,4 @@
-$(function() {
+$(function(){
   const closeClass = 'Nav-overvlayHide';
 
   let close = $('.Nav-close');
