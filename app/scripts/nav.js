@@ -3,7 +3,7 @@ $(function() {
   const navSelector = '.Nav';
   const onTopClass = 'Nav--onTop';
 
-  let nav = $(navSelector);
+  var nav = $(navSelector);
 
   function onScroll() {
     var currentScrollTop = $(document).scrollTop();

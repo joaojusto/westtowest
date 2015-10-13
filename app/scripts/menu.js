@@ -1,10 +1,10 @@
 $(function(){
   const closeClass = 'Nav-overvlayHide';
 
-  let close = $('.Nav-close');
-  let burger = $('.Nav-burger');
-  let overlay = $('.Nav-overlay');
-  let navLinks = $('.Nav-overlayLink');
+  var close = $('.Nav-close');
+  var burger = $('.Nav-burger');
+  var overlay = $('.Nav-overlay');
+  var navLinks = $('.Nav-overlayLink');
 
   function toggleMenu() {
     overlay.toggleClass(closeClass);
