@@ -1,4 +1,4 @@
-$nav-height: 100px;
+$nav-height: 80px;
 $nav-height-mobile: 60px;
 
 $nav-logo-width: 75px;
@@ -16,19 +16,21 @@ $nav-logo-height: 50px;
   position: fixed;
 
   background-color: $Theme-color-white;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
 
   z-index: 1;
+
+  transition: all 0.3s;
 }
 
 .Nav-logo {
   width: $nav-logo-width;
   height: $nav-logo-height;
 
-  margin-left: $Theme-margin-half;
+  margin-left: $Theme-margin-small;
 
-  background-color: $Theme-color-light-blue;
   background-size: cover;
-  background-image: url('../images/logo@2x.png');
+  background-image: url('../images/logo-light-blue@2x.png');
 }
 
 .Nav-links {
@@ -39,12 +41,40 @@ $nav-logo-height: 50px;
 .Nav-link {
   @include font-properties(sans, desktop, content, small);
 
-  margin: 0 $Theme-margin-half;
+  margin: 0 $Theme-margin-small;
 
   color: $Theme-color-light-blue;
   text-transform: uppercase;
+
+  &:hover {
+    color: $Theme-color-blue;
+
+    transition: color 0.4s;
+  }
 }
 
+.Nav.Nav--onTop {
+  justify-content: flex-end;
+
+  background: none;
+  box-shadow: none;
+
+  .Nav-logo {
+    display: none;
+  }
+
+  .Nav-link {
+    color: $Theme-color-white;
+
+    &:hover {
+      color: $Theme-color-blue;
+
+      transition: color 0.4s;
+    }
+  }
+
+  transition: all 0.6s;
+}
 
 @media (max-width: $Theme-break-mobile) {
   .Nav {

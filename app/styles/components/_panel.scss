@@ -92,13 +92,6 @@ $panel-content-max-width: 500px;
   background-repeat: no-repeat;
 }
 
-.Panel--networking {
-  color: $Theme-color-white;
-  background-image: url('../images/networking@2x.jpg');
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-}
-
 @media (max-width: $Theme-break-mobile) {
   .Panel {
     padding: $Theme-margin-default $Theme-margin-small;
@@ -118,8 +111,6 @@ $panel-content-max-width: 500px;
 
   .Panel-content {
     @include font-properties(sans, mobile);
-
-    //margin-top: 0;
   }
 
   .Panel-text {
