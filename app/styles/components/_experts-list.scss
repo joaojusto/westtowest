@@ -1,0 +1,44 @@
+$experts-list-max-width: 500px;
+
+.ExpertsList {
+  max-width: $experts-list-max-width;
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.ExpertsList-expert {
+  margin-bottom: $Theme-margin-large;
+
+  &.noMargin {
+    margin-bottom: 0;
+  }
+}
+
+.ExpertsList-description {
+  @include font-properties(serif);
+
+  color: $Theme-color-black;
+  opacity: $Theme-opacity-black;
+}
+
+.ExpertsList-contacts {
+  margin-top: $Theme-margin-small;
+}
+
+.ExpertsList-tags {
+  margin-top: $Theme-margin-small;
+}
+
+.ExpertsList-tag {
+  @include font-properties(serif);
+
+  display: inline-block;
+
+  margin-right: $Theme-margin-small;
+  margin-bottom: $Theme-margin-small;
+
+  color: $Theme-color-blue;
+  border-bottom: 2px solid $Theme-color-green;
+}

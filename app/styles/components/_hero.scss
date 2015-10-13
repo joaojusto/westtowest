@@ -14,10 +14,15 @@ $hero-max-width: 600px;
   background-repeat: no-repeat;
 }
 
+.Hero--experts {
+  background-image: url('../images/experts@2x.png');
+}
+
 .Hero-title {
   margin-top: $Theme-margin-default;
 
   text-align: center;
+  text-transform: uppercase;
 }
 
 .Hero-heading {

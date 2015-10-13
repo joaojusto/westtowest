@@ -69,6 +69,24 @@ $person-link-icon-size: 25px;
   }
 }
 
+.Person--expert {
+  margin-bottom: $Theme-margin-small;
+
+  .Person-information {
+    justify-content: center;
+  }
+
+  .Person-name {
+    color: $Theme-color-blue;
+  }
+
+  .Person-job,
+  .Person-company {
+    color: $Theme-color-black;
+    opacity: $Theme-opacity-black;
+  }
+}
+
 .Person--noMargin {
   margin: 0;
 }
