@@ -3,7 +3,7 @@ $(function() {
   const navSelector = '.Nav';
   const onTopClass = 'Nav--onTop';
 
-  let $nav = $(navSelector);
+  let nav = $(navSelector);
 
   function onScroll() {
     var currentScrollTop = $(document).scrollTop();
@@ -13,9 +13,9 @@ $(function() {
 
   function updateNav(currentScrollTop) {
     var update = function() {
-      if (isOnTop(currentScrollTop) && !$nav.hasClass(onTopClass))
+      if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass))
         toggleNavOnTop();
-      else if (!isOnTop(currentScrollTop) && $nav.hasClass(onTopClass))
+      else if (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass))
         toggleNavOnTop();
     };
 
@@ -27,7 +27,7 @@ $(function() {
   }
 
   function toggleNavOnTop() {
-    $nav.toggleClass(onTopClass);
+    nav.toggleClass(onTopClass);
   }
 
   window.onscroll = onScroll;
