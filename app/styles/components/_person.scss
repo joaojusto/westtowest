@@ -117,4 +117,10 @@ $person-link-icon-size: 25px;
   .Person--noMargin {
     margin: 0;
   }
+
+  .Person--expert {
+    .Person-information {
+      margin-left: 0;
+    }
+  }
 }

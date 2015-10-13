@@ -42,3 +42,17 @@ $experts-list-max-width: 500px;
   color: $Theme-color-blue;
   border-bottom: 2px solid $Theme-color-green;
 }
+
+@media (max-width: $Theme-break-mobile) {
+  .ExpertsList-expert {
+    margin-bottom: $Theme-margin-default;
+  }
+
+  .ExpertsList-description {
+    @include font-properties(serif, mobile);
+  }
+
+  .ExpertsList-tag {
+    @include font-properties(serif, mobile);
+  }
+}
