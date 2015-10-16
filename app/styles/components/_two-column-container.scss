@@ -49,7 +49,7 @@ $column-min-width-mobile: 200px;
 
 @media (max-width: $Theme-break-mobile) {
   .TwoColumnContainer-column {
-    flex: 1;
+    flex: 1 1 $column-min-width-mobile;
 
     min-width: $column-min-width-mobile;
 

@@ -25,12 +25,13 @@ $panel-content-max-width: 500px;
   align-items: center;
   text-align: center;
 
-  margin-bottom: $Theme-margin-default;
+  margin-bottom: $Theme-margin-half;
 }
 
 .Panel-heading {
   @include font-properties(sans, desktop, content, heading);
 
+  font-weight: bold;
   text-transform: uppercase;
 
   opacity: $Theme-opacity-half;
@@ -58,7 +59,6 @@ $panel-content-max-width: 500px;
 .Panel-content {
   @include font-properties(sans);
 
-  margin-top: $Theme-margin-half;
   max-width: $panel-content-max-width;
 }
 
