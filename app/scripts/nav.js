@@ -4,22 +4,33 @@ $(function() {
   const onTopClass = 'Nav--onTop';
 
   var nav = $(navSelector);
+  var scrolled = false;
+  var lastScrollTop = 0;
 
   function onScroll() {
-    var currentScrollTop = $(document).scrollTop();
-
-    setTimeout(updateNav(currentScrollTop), 250);
+    scrolled = true;
   }
 
-  function updateNav(currentScrollTop) {
-    var update = function() {
-      if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass))
-        toggleNavOnTop();
-      else if (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass))
-        toggleNavOnTop();
-    };
+  setInterval(updateNav, 300);
 
-    return update;
+  function updateNav() {
+    if (!scrolled) {
+      return;
+    }
+
+    var currentScrollTop = $(document).scrollTop();
+
+    scrolled = false;
+    if (hasntScrolledEnough(lastScrollTop, currentScrollTop, delta)) {
+      return;
+    }
+
+    lastScrollTop = currentScrollTop;
+
+    if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass) ||
+        (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass)))
+      toggleNavOnTop();
+
   }
 
   function isOnTop(currentScrollTop) {
@@ -28,6 +39,10 @@ $(function() {
 
   function toggleNavOnTop() {
     nav.toggleClass(onTopClass);
+  }
+
+  function hasntScrolledEnough(lastScrollTop, currentScrollTop, delta) {
+    return Math.abs(lastScrollTop - currentScrollTop) <= delta;
   }
 
   window.onscroll = onScroll;
