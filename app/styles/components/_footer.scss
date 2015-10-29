@@ -5,6 +5,8 @@ $svg-margin-top: 12px;
 $svg-width-mobile: 114px;
 $svg-height-mobile: 16px;
 
+$icon-size: 25px;
+
 .Footer {
   display: flex;
   justify-content: space-between;
@@ -15,7 +17,7 @@ $svg-height-mobile: 16px;
 }
 
 .Footer-content {
-  @include font-properties(sans);
+  @include font-properties(sans, desktop, content, large);
 
   margin-top: $Theme-margin-half;
 
@@ -45,6 +47,13 @@ $svg-height-mobile: 16px;
 
   margin-top: $svg-margin-top;
   margin-bottom: 8px;
+}
+
+.Footer-socialIcon{
+  width: $icon-size;
+  height: $icon-size;
+
+  margin: $Theme-margin-half $Theme-margin-small 0 0;
 }
 
 @media (max-width: $Theme-break-mobile) {
