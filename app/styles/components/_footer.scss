@@ -19,7 +19,7 @@ $icon-size: 25px;
 .Footer-content {
   @include font-properties(sans, desktop, content, large);
 
-  margin-top: $Theme-margin-half;
+  margin-top: $Theme-margin-small;
 
   color: $Theme-color-white;
   font-weight: bold;
