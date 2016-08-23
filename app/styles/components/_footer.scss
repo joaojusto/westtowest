@@ -7,6 +7,8 @@ $svg-height-mobile: 16px;
 
 $icon-size: 25px;
 
+$footer-break-navlinks: 940px;
+
 .Footer {
   display: flex;
   justify-content: space-between;
@@ -16,26 +18,43 @@ $icon-size: 25px;
   background-color: $Theme-color-blue;
 }
 
-.Footer-content {
-  @include font-properties(sans, desktop, content, large);
-
-  margin-top: $Theme-margin-small;
-
-  color: $Theme-color-white;
-  font-weight: bold;
-}
-
-.Footer-column{
+.Footer-links {
+  @include font-properties(sans, desktop, content, small);
+  
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
+}
+
+.Footer-link {
+  text-transform: uppercase;
+  color: $Theme-color-white;
+  font-weight: bold;
+
+  &:hover {
+    opacity: $Theme-opacity-half;
+    transition: opacity 0.4s
+  }
+}
+
+.Footer-content {
+  @include font-properties(sans, desktop, content, small);
+  display: flex;
+  flex-direction: column;
+  padding-top: $Theme-margin-small;
+
+  color: $Theme-color-white;
+}
+
+.Footer-column {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 }
 
 .Footer-credits {
   @include font-properties(sans, desktop, content, small);
 
   align-self: flex-end;
-
   color: $Theme-color-white;
   text-align: center;
   text-transform: uppercase;
@@ -49,22 +68,32 @@ $icon-size: 25px;
   margin-bottom: 8px;
 }
 
-.Footer-socialIcon{
+.Footer-socialIcon {
   width: $icon-size;
   height: $icon-size;
 
-  margin: $Theme-margin-small $Theme-margin-small 0 0;
+  &.Footer-socialIcon--withMargin {
+    margin-right: $Theme-margin-small;
+  }
 }
 
-@media (max-width: $Theme-break-mobile) {
-  .Footer {
-    padding: $Theme-margin-half $Theme-margin-small;
+@media (max-width: $footer-break-navlinks) {
+
+  .Footer-links {
+    display: none;
   }
 
-  .Footer-content {
-    @include font-properties(sans, mobile);
+  .Footer {
+    padding: $Theme-margin-half $Theme-margin-small;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    margin-top: $Theme-margin-small;
+  .Footer-column {
+    align-self: center;
+    align-items: center;
+    justify-content: center;
   }
 
   .Footer-credits {
@@ -72,10 +101,9 @@ $icon-size: 25px;
 
     margin-top: $Theme-margin-half;
 
-    text-align: left;
   }
 
-  .Footer-svgWrapper{
+  .Footer-svgWrapper {
     width: $svg-width-mobile;
     height: $svg-height-mobile;
   }
