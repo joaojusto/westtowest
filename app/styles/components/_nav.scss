@@ -10,6 +10,8 @@ $nav-logo-mobile-height: 35px;
 $nav-burger-width: 25px;
 $nav-burger-height: 16px;
 
+$nav-break-mobile: 798px;
+
 .Nav {
   width: 100%;
   height: $nav-height;
@@ -64,6 +66,8 @@ $nav-burger-height: 16px;
   width: $nav-burger-width;
   height: $nav-burger-height;
 
+  display: none;
+
   margin-right: $Theme-margin-small;
 
   cursor: pointer;
@@ -100,7 +104,7 @@ $nav-burger-height: 16px;
   transition: all 0.6s;
 }
 
-@media (max-width: $Theme-break-mobile) {
+@media (max-width: $nav-break-mobile) {
   .Nav {
     height: $nav-height-mobile;
 
@@ -114,5 +118,9 @@ $nav-burger-height: 16px;
 
   .Nav-links {
     display: none;
+  }
+
+  .Nav-burger{
+    display: block;
   }
 }
