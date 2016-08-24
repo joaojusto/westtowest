@@ -1,6 +1,5 @@
 $input-padding: 10px;
 $input-group-min-width: 200px;
-$input-group-break-mobile: 549px;
 
 .InputGroup {
   width: 100%;
@@ -53,7 +52,13 @@ $input-group-break-mobile: 549px;
   }
 }
 
-@media (max-width: $input-group-break-mobile) {
+@media (max-width: $Theme-break-mobile) {
+  .InputGroup {
+    flex-direction: column;
+  }
+  .InputGroup-column {
+    flex: 1 1 auto;
+  }
   .InputGroup-marginOnSmall {
     margin: $Theme-margin-half 0 $Theme-margin-small 0;
   }

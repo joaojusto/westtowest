@@ -9,3 +9,10 @@
 .u-marginSmall {
   margin: $Theme-margin-small 0 0 0;
 }
+
+.u-noMaringTop {
+  margin-top: 0;
+}
+.u-marginBottomSmall {
+  margin-bottom: $Theme-margin-small;
+}

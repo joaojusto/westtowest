@@ -1,11 +1,26 @@
 $grid-max-width: 1200px;
+$grid-break-mobile: 1049px;
 
 .Grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 
   max-width: $grid-max-width;
   margin-top: $Theme-margin-half;
+}
+
+.Grid--withMargin {
+  margin-right: $Theme-margin-default;
+}
+
+@media (max-width: $grid-break-mobile) {
+  .Grid {
+    flex-direction: column;
+  }
+  
+  .Grid--withMargin {
+    margin-right: 0;
+  }
 }

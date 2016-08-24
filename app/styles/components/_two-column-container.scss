@@ -6,7 +6,7 @@ $column-min-width-mobile: 200px;
 .TwoColumnContainer {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 
   width: 100%;
@@ -16,10 +16,13 @@ $column-min-width-mobile: 200px;
   flex: 1 1 $column-min-width;
   min-width: $column-min-width;
   max-width: $column-max-width;
+  display: flex;
+  flex-direction: column;
 
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 $Theme-margin-small;
+}
+
+.TwoColumnContainer-column--withMargin {
+  margin-right: $Theme-margin-default;
 }
 
 .TwoColumnContainer-title {
@@ -47,13 +50,26 @@ $column-min-width-mobile: 200px;
   opacity: $Theme-opacity-black;
 }
 
+.TwoColumnContainer-button {
+  margin-top: auto;
+}
+
 @media (max-width: $Theme-break-mobile) {
+  .TwoColumnContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .TwoColumnContainer-column {
-    flex: 1 1 $column-min-width-mobile;
+    flex: 1 1 auto;
 
     min-width: $column-min-width-mobile;
 
     padding: 0;
+  }
+
+  .TwoColumnContainer-column--withMargin {
+    margin-right: 0;
   }
 
   .TwoColumnContainer-title {
