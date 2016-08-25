@@ -1,21 +1,29 @@
 $sponsor-cell-height: 80px;
+$sponsor-grid-width: 868px;
 
 .SponsorGrid {
-  width: 100%;
   display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: $sponsor-grid-width;
+}
+
+.SponsorGrid-row {
+  display: flex;
+  width: 100%;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 .SponsorGrid-cell {
-  max-width: 100%;
-  height: $sponsor-cell-height;
   margin: $Theme-margin-small $Theme-margin-half;
+  height: $sponsor-cell-height;
 }
 
 @media (max-width: $Theme-break-mobile) {
   .SponsorGrid {
     margin-top: 0;
+    flex-direction: row;
   }
 }
