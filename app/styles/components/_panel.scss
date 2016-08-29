@@ -99,6 +99,13 @@ $panel-content-max-width: 500px;
   }
 }
 
+.Panel--team {
+  background-image: url('../images/officers@2x.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .Panel--cta {
   background-image: url('../images/cta@2x.jpg');
   background-size: cover;
@@ -154,6 +161,12 @@ $panel-content-max-width: 500px;
   .Panel--networking {
     background-size: cover;
     background-image: url('../images/networking.jpg');
+    background-position: 0 0;
+  }
+
+  .Panel--team {
+    background-size: cover;
+    background-image: url('../images/officers-img-mobile@2x.png');
     background-position: 0 0;
   }
 }

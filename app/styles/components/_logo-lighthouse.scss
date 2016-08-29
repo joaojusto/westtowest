@@ -1,0 +1,21 @@
+$lighthouse-width: 40px;
+$lighthouse-height: 70px;
+
+$lighthouse-width-mobile: 32px;
+$lighthouse-height-mobile: 55px;
+
+.LogoLighthouse {
+  width: $lighthouse-width;
+  height: $lighthouse-height;
+
+  background-image: url('../images/lighthouse-top@2x.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+@media (max-width: $Theme-break-mobile) {
+  .LogoLighthouse {
+    width: $lighthouse-width-mobile;
+    height: $lighthouse-height-mobile;
+  }
+}

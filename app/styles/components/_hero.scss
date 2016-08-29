@@ -1,4 +1,5 @@
 $hero-max-width: 600px;
+$hero-margin-small: 10px;
 
 .Hero {
   display: flex;
@@ -16,6 +17,16 @@ $hero-max-width: 600px;
 
 .Hero--experts {
   background-image: url('../images/experts@2x.jpg');
+}
+
+.Hero--team {
+  background-image: url('../images/officers-board@2x.png');
+
+  .Hero-title {
+    margin-top: $hero-margin-small;
+  
+    text-align: center;
+  }
 }
 
 .Hero-title {
@@ -49,6 +60,14 @@ $hero-max-width: 600px;
     padding: $Theme-margin-default $Theme-margin-small;
 
     background-image: url('../images/hero.jpg');
+  }
+
+  .Hero--team{
+    padding: $Theme-margin-default $Theme-margin-small;
+
+    background-image: url('../images/officers-board.png');
+
+    background-position: center;
   }
 
   .Hero-title {

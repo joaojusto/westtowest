@@ -2,13 +2,12 @@ $person-job-margin: 5px;
 $person-image-size: 200px;
 $person-name-max-width: 200px;
 $person-link-icon-size: 25px;
+$person-top-margin: 13px;
 
 .Person {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-
-  margin-bottom: $Theme-margin-default;
 }
 
 .Person-information {
@@ -45,7 +44,7 @@ $person-link-icon-size: 25px;
 .Person-company {
   @include font-properties(serif, desktop, content, large);
 
-  margin-top: $Theme-margin-small;
+  margin-top: $person-top-margin;
   text-transform: capitalize;
 
   opacity: $Theme-opacity-white;
@@ -55,7 +54,7 @@ $person-link-icon-size: 25px;
 .Person-link {
   width: $person-link-icon-size;
   height: $person-link-icon-size;
-  margin-top: $Theme-margin-small;
+  margin-top: $person-top-margin;
 }
 
 .Person--dark {
@@ -71,7 +70,8 @@ $person-link-icon-size: 25px;
 
 .Person--expert {
   margin-bottom: $Theme-margin-small;
-
+  align-items: center;
+  
   .Person-information {
     justify-content: center;
   }
@@ -87,19 +87,17 @@ $person-link-icon-size: 25px;
   }
 }
 
-.Person--noMargin {
-  margin: 0;
-}
-
 @media (max-width: $Theme-break-mobile) {
   .Person {
-    margin-bottom: $Theme-margin-half;
+    flex-direction: column;
   }
 
   .Person-name {
     @include font-properties(sans, mobile);
 
     margin-top: $Theme-margin-small;
+
+    text-align: center;
   }
 
   .Person-job {
@@ -113,14 +111,9 @@ $person-link-icon-size: 25px;
   .Person-image {
     margin: 0 auto;
   }
-
-  .Person--noMargin {
-    margin: 0;
-  }
-
-  .Person--expert {
-    .Person-information {
-      margin-left: 0;
-    }
+  
+  .Person-information {
+    margin-left: 0;
+    align-items: center;
   }
 }

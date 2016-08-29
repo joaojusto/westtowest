@@ -1,4 +1,4 @@
-$grid-max-width: 1200px;
+$grid-max-width: 950px; // (person-image + person-information * 2) + grid-cell Right Margin
 $grid-break-mobile: 1049px;
 
 .Grid {
@@ -8,19 +8,39 @@ $grid-break-mobile: 1049px;
   justify-content: center;
 
   max-width: $grid-max-width;
-  margin-top: $Theme-margin-half;
 }
 
-.Grid--withMargin {
+.Grid-cell {
+  margin-bottom: $Theme-margin-default;
+}
+
+.Grid-fullWidthCell {
+  flex: 1;
+}
+
+.Grid-cell:nth-child(odd) {
   margin-right: $Theme-margin-default;
+}
+
+.Grid-cell:nth-last-child(2),
+.Grid-cell:nth-last-child(1) {
+  margin-bottom: 0;
 }
 
 @media (max-width: $grid-break-mobile) {
   .Grid {
     flex-direction: column;
   }
-  
-  .Grid--withMargin {
+
+  .Grid-cell {
+    margin-bottom: $Theme-margin-half;
+  }
+
+  .Grid-cell:nth-child(odd) {
     margin-right: 0;
+  }
+
+  .Grid-cell:nth-last-child(2) {
+    margin-bottom: $Theme-margin-half;
   }
 }
