@@ -1,0 +1,121 @@
+$testimonials_break_mobile: 650px;
+
+$arrow_width: 28px;
+$arrow_height: 52px;
+
+$quote_marks_width: 30px;
+$quote_marks_height: 24px;
+
+$separator_width: 30px;
+$separator_height: 3px;
+
+
+.Testimonial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Testimonial-quoteMark {
+    background-image: url('../images/marks.png');
+    height: $quote_marks_height;
+    width: $quote_marks_width;
+}
+
+.Testimonial-text {
+    @include font-properties(serif, desktop, content, heading);
+
+    max-width: 500px;
+    font-weight: bold;
+    font-style: italic;
+    text-align: center;
+}
+
+.Testimonial-separator {
+    width: $separator_width;
+    height: $separator_height;
+    border: 0;
+    background: #FFF;
+}
+
+.Testimonial-author {
+    @include font-properties(sans, desktop, content, heading);
+    
+    font-weight: bold;
+}
+
+.Testimonial-authorBackground {
+    @include font-properties(serif, desktop, content, small);
+    
+    margin-top: $Theme-margin-xSmall; 
+}
+
+// Start SliderPro Stylings
+// Default styles overriden as such so as to not edit SliderPro's src
+.sp-buttons {
+    margin-top: $Theme-margin-xSmall;
+    
+    .sp-button {
+        border-color: #FFF;
+        &.sp-selected-button {
+            background-color: #FFF;
+        }
+    }
+}
+
+// Arrows contained within slides
+.sp-arrows {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    justify-content: space-between;
+    left: -50%;
+}
+
+.sp-previous-arrow:before,
+.sp-previous-arrow:after,
+.sp-next-arrow:before,
+.sp-next-arrow:after {
+    display: none;
+}
+
+.sp-previous-arrow {
+    background-image: url('../images/left-arrow.png');
+    background-repeat: no-repeat;
+}
+
+.sp-next-arrow {
+    background-image: url('../images/right-arrow.png');
+    background-repeat: no-repeat;
+}
+
+.sp-arrow {
+    position: relative;
+    height: $arrow_height;
+    width: $arrow_width;
+}
+
+// End SliderPro Stylings
+
+@media (max-width: $testimonials-break-mobile) {
+    .sp-previous-arrow,
+    .sp-next-arrow {
+        display:none;
+    }
+
+    .Testimonial-text {
+        @include font-properties(serif, mobile, content, heading);
+    }
+
+    .Testimonial-author {
+        @include font-properties(serif, mobile, content, heading);
+    }
+
+    .Testimonial-authorBackground {
+        margin-top: 0px;
+    }
+
+    .Testimonial-background {
+        @include font-properties(sans, mobile, content, small);
+    }
+}

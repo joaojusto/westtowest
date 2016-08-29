@@ -86,6 +86,18 @@ $panel-content-max-width: 500px;
   background-color: $Theme-color-white;
 }
 
+.Panel--solidLightBlue {
+  background-color: $Theme-color-light-blue;
+}
+
+.Panel--lightBlue {
+  color: $Theme-color-white;
+
+  .Panel-titleImage {
+    background-image: url('../images/lighthouse-white@2x.png');
+  }
+}
+
 .Panel--cta {
   background-image: url('../images/cta@2x.jpg');
   background-size: cover;
