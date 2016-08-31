@@ -45,6 +45,7 @@ $background-z-index: -1;
 
 .BackgroundColumn--imageNetworking {
   background-image: url('../images/networking@2x.jpg');
+  background-position: 0% 100%;
 }
 
 @media (max-width: $Theme-break-mobile) {
