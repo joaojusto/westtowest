@@ -78,13 +78,11 @@ $nav-break-mobile: 798px;
 }
 
 .Nav.Nav--onTop {
-  justify-content: flex-end;
-
   background: none;
   box-shadow: none;
 
   .Nav-logo {
-    display: none;
+    background-image: url('../images/logo@2x.png');
   }
 
   .Nav-link {
