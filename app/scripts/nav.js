@@ -1,11 +1,13 @@
 $(function() {
   const delta = 50;
   const navSelector = '.Nav';
+  const onTopClassIndex = 'Nav--onTopIndex';
   const onTopClass = 'Nav--onTop';
 
   var nav = $(navSelector);
   var scrolled = false;
   var lastScrollTop = 0;
+  var last_class = null;
 
   function onScroll() {
     scrolled = true;
@@ -27,9 +29,24 @@ $(function() {
 
     lastScrollTop = currentScrollTop;
 
-    if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass) ||
-        (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass)))
-      toggleNavOnTop();
+    if (nav.hasClass(onTopClassIndex)) {
+      last_class = onTopClassIndex;
+    } else if (nav.hasClass(onTopClass)){
+      last_class = onTopClass;
+    }
+
+    if (last_class == onTopClass) {
+
+      if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass) ||
+          (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass)))
+        toggleNavOnTop();
+
+    } else if (last_class == onTopClassIndex) {
+
+      if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClassIndex) ||
+          (!isOnTop(currentScrollTop) && nav.hasClass(onTopClassIndex)))
+        toggleNavOnTopIndex();
+    }
 
   }
 
@@ -39,6 +56,10 @@ $(function() {
 
   function toggleNavOnTop() {
     nav.toggleClass(onTopClass);
+  }
+
+  function toggleNavOnTopIndex() {
+    nav.toggleClass(onTopClassIndex);
   }
 
   function hasntScrolledEnough(lastScrollTop, currentScrollTop, delta) {
