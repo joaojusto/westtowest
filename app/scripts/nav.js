@@ -39,13 +39,13 @@ $(function() {
 
       if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass) ||
           (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass)))
-        toggleNavOnTop();
+        toggleNavOnTop(onTopClass);
 
     } else if (last_class == onTopClassIndex) {
 
       if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClassIndex) ||
           (!isOnTop(currentScrollTop) && nav.hasClass(onTopClassIndex)))
-        toggleNavOnTopIndex();
+        toggleNavOnTop(onTopClassIndex);
     }
 
   }
@@ -54,12 +54,8 @@ $(function() {
     return currentScrollTop < delta;
   }
 
-  function toggleNavOnTop() {
-    nav.toggleClass(onTopClass);
-  }
-
-  function toggleNavOnTopIndex() {
-    nav.toggleClass(onTopClassIndex);
+  function toggleNavOnTop(selected_class) {
+    nav.toggleClass(selected_class);
   }
 
   function hasntScrolledEnough(lastScrollTop, currentScrollTop, delta) {
