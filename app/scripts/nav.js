@@ -7,7 +7,7 @@ $(function() {
   var nav = $(navSelector);
   var scrolled = false;
   var lastScrollTop = 0;
-  var last_class = null;
+  var lastClass = getLastClass();
 
   function onScroll() {
     scrolled = true;
@@ -29,23 +29,8 @@ $(function() {
 
     lastScrollTop = currentScrollTop;
 
-    if (nav.hasClass(onTopClassIndex)) {
-      last_class = onTopClassIndex;
-    } else if (nav.hasClass(onTopClass)){
-      last_class = onTopClass;
-    }
-
-    if (last_class == onTopClass) {
-
-      if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClass) ||
-          (!isOnTop(currentScrollTop) && nav.hasClass(onTopClass)))
-        toggleNavOnTop(onTopClass);
-
-    } else if (last_class == onTopClassIndex) {
-
-      if (isOnTop(currentScrollTop) && !nav.hasClass(onTopClassIndex) ||
-          (!isOnTop(currentScrollTop) && nav.hasClass(onTopClassIndex)))
-        toggleNavOnTop(onTopClassIndex);
+    if (lastClass === onTopClass || lastClass === onTopClassIndex) {
+      toggleNavOnTop(lastClass, currentScrollTop);
     }
 
   }
@@ -54,8 +39,19 @@ $(function() {
     return currentScrollTop < delta;
   }
 
-  function toggleNavOnTop(selected_class) {
-    nav.toggleClass(selected_class);
+  function getLastClass() {
+    if (nav.hasClass(onTopClassIndex)) {
+      return onTopClassIndex;
+    } else if (nav.hasClass(onTopClass)){
+      return onTopClass;
+    }
+  }
+
+  function toggleNavOnTop(selectedClass, currentScrollTop) {
+    if (isOnTop(currentScrollTop) && !nav.hasClass(selectedClass) ||
+        (!isOnTop(currentScrollTop) && nav.hasClass(selectedClass))) {
+      nav.toggleClass(selectedClass);
+    }
   }
 
   function hasntScrolledEnough(lastScrollTop, currentScrollTop, delta) {

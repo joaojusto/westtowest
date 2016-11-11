@@ -77,14 +77,10 @@ $nav-break-mobile: 798px;
   background-image: url('../images/hamburger@2x.png');
 }
 
-.Nav.Nav--onTopIndex {
+.Nav.Nav--onTopIndex,
+.Nav.Nav--onTop {
   background: none;
   box-shadow: none;
-  justify-content: flex-end;
-
-  .Nav-logo {
-    display: none;
-  }
 
   .Nav-link {
     color: $Theme-color-white;
@@ -103,29 +99,18 @@ $nav-break-mobile: 798px;
   transition: all 0.6s;
 }
 
-.Nav.Nav--onTop {
-  background: none;
-  box-shadow: none;
+.Nav.Nav--onTopIndex {
+  justify-content: flex-end;
 
+  .Nav-logo {
+    display: none;
+  }
+}
+
+.Nav.Nav--onTop {
   .Nav-logo {
     background-image: url('../images/logo@2x.png');
   }
-
-  .Nav-link {
-    color: $Theme-color-white;
-
-    &:hover {
-      color: $Theme-color-blue;
-
-      transition: color 0.4s;
-    }
-  }
-
-  .Nav-burger {
-    background-image: url('../images/hamburger_white@2x.png');
-  }
-
-  transition: all 0.6s;
 }
 
 @media (max-width: $nav-break-mobile) {
