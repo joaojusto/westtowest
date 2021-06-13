@@ -1,7 +1,7 @@
 $(function() {
-  const delta = 50;
-  const navSelector = '.Nav';
-  const onTopClass = 'Nav--onTop';
+  var delta = 50;
+  var navSelector = '.Nav';
+  var onTopClass = 'Nav--onTop';
 
   var nav = $(navSelector);
   var scrolled = false;

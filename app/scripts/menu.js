@@ -1,6 +1,6 @@
 $(function(){
-  const closeClass = 'is-hidden';
-  const noScrollClass = 'u-noScroll';
+  var closeClass = 'is-hidden';
+  var noScrollClass = 'u-noScroll';
 
   var body = $('body');
   var close = $('.Overlay-close');
