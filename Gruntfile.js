@@ -167,6 +167,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
+        implementation: require("node-sass"),
         sourceMap: true,
         sourceMapEmbed: true,
         sourceMapContents: true,
@@ -188,9 +189,7 @@ module.exports = function (grunt) {
         map: true,
         processors: [
           // Add vendor prefixed styles
-          require('autoprefixer')({
-            browsers: ['> 1%', 'last 3 versions', 'Firefox ESR']
-          })
+          require('autoprefixer')({})
         ]
       },
       dist: {
